@@ -1,0 +1,12 @@
+.db
+.DS_Store
+.idea
+.ini
+.log
+.lintstagedrc.json
+node_modules
+package-log.json
+eslint.config.mjs
+commitlint.config.js
+.prettierrc.json
+*.tgz

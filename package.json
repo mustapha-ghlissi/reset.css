@@ -1,0 +1,73 @@
+{
+  "name": "@mustapha-ghlissi/reset.css",
+  "version": "1.0.0",
+  "description": "Default browsers style resetter",
+  "main": "reset.css",
+  "style": "./reset.css",
+  "scripts": {
+    "start": "npm-run-all raw prod compat",
+    "raw": "npx postcss src/reset.css -o reset.css --no-map --env development",
+    "prod": "npx postcss src/reset.css -o reset.min.css --no-map --env production",
+    "compat": "npx postcss src/reset.css -o reset.compat.css --no-map --env compat",
+    "clean": "rm -rf reset.*",
+    "build": "npm-run-all clean start",
+    "release": "release-it --no-git.requireCleanWorkingDir"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mustapha-ghlissi/reset.css.git"
+  },
+  "keywords": [
+    "css",
+    "reset",
+    "reset-css",
+    "reset.css",
+    "default-style",
+    "default-css",
+    "default-browser-style",
+    "browser-style"
+  ],
+  "author": {
+    "name": "Mustapha GHLISSI",
+    "email": "ghlissi.mustapha@gmail.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mustapha-ghlissi/reset.css/issues"
+  },
+  "homepage": "https://github.com/mustapha-ghlissi/reset.css#readme",
+  "resetCssConfig": {
+    "prefix": "reset_css__"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^19.4.0",
+    "@commitlint/config-conventional": "^19.2.2",
+    "@eslint/js": "^9.8.0",
+    "@release-it/conventional-changelog": "^8.0.1",
+    "autoprefixer": "^10.4.20",
+    "cssnano": "^7.0.5",
+    "eslint": "^9.8.0",
+    "eslint-config-prettier": "^9.1.0",
+    "globals": "^15.9.0",
+    "husky": "^9.1.4",
+    "lint-staged": "^15.2.8",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.4.41",
+    "postcss-cli": "^11.0.0",
+    "postcss-header": "^3.0.3",
+    "postcss-import": "^16.1.0",
+    "postcss-prefixer": "^3.0.0",
+    "postcss-preset-env": "^10.0.0",
+    "prettier": "3.3.3",
+    "release-it": "^17.6.0"
+  },
+  "files": [
+    "reset.compat.css",
+    "reset.min.css",
+    "reset.css",
+    "src/*.css"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
+}
